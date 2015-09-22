@@ -6,7 +6,7 @@ gem 'rake'
 gem 'lotusrb',       '0.4.1'
 gem 'lotus-model',   '~> 0.4'
 
-gem 'coveralls', require: false
+# gem 'coveralls', require: false
 
 
 group :test do
