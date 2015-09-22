@@ -1,6 +1,9 @@
 # Require this file for unit tests
 ENV['LOTUS_ENV'] ||= 'test'
 
+require 'coveralls'
+Coveralls.wear!
+
 require_relative '../config/environment'
 Lotus::Application.preload!
 
