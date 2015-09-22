@@ -15,7 +15,7 @@ Lotus::Model.configure do
   #    adapter type: :sql, uri: 'postgres://localhost/lotus-todo_development'
   #    adapter type: :sql, uri: 'mysql://localhost/lotus-todo_development'
   #
-  adapter type: :file_system, uri: ENV['LOTUS_TODO_DATABASE_URL']
+  adapter type: :sql, uri: ENV['LOTUS_TODO_DATABASE_URL']
 
   ##
   # Database mapping
@@ -36,5 +36,12 @@ Lotus::Model.configure do
     #   attribute :id,   Integer
     #   attribute :name, String
     # end
+    collection :todos do
+      entity Todo
+      repository TodoRepository
+      attribute :id,      Integer
+      attribute :status,  String
+      attribute :title,   String
+    end
   end
 end.load!
