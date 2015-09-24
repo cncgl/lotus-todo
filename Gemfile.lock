@@ -78,7 +78,7 @@ DEPENDENCIES
   bundler
   capybara
   lotus-model (~> 0.4)
-  lotusrb (= 0.4.1)
+  lotusrb (~> 0.4)
   pg (~> 0.18)
   rake
   rspec

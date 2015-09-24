@@ -1,11 +1,8 @@
 module Web::Controllers::Todos
-  class Index
+  class New
     include Web::Action
 
-    expose :todos
-
     def call(params)
-      @todos = TodoRepository.all
     end
   end
 end

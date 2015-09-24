@@ -4,3 +4,5 @@
 get '/', to: 'home#index'
 
 get '/todos', to: 'todos#index'
+get '/todos/new', to: 'todos#new'
+post '/todos', to: 'todos#create'
