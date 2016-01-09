@@ -22,8 +22,15 @@ $ bundle exec lotus db migrate
 ```
 $ bundle exec lotus server
 ```
-
 visit http://localhost:2300/todos
+
+## Test
+
+```
+$ LOTUS_ENV=test bundle exec lotus db create
+$ LOTUS_ENV=test bundle exec lotus db migrate
+$ bundle exec rspec
+```
 
 ## Lisence
 MIT

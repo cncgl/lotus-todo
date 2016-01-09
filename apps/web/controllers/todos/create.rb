@@ -4,10 +4,19 @@ module Web::Controllers::Todos
 
     expose :todo
 
-    def call(params)
-      @todo = TodoRepository.create(Todo.new(params[:todo]))
+    params do
+      param :todo do
+        param :status, presence: true
+        param :title, presence: true
+      end
+    end
 
-      redirect_to '/todos'
+    def call(params)
+      if params.valid?
+        @todo = TodoRepository.create(Todo.new(params[:todo]))
+
+        redirect_to '/todos'
+      end
     end
   end
 end

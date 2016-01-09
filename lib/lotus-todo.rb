@@ -40,7 +40,7 @@ Lotus::Model.configure do
       entity Todo
       repository TodoRepository
       attribute :id,      Integer
-      attribute :status,  String
+      attribute :status,  Integer
       attribute :title,   String
     end
   end

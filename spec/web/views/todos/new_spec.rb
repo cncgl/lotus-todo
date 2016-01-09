@@ -21,6 +21,6 @@ describe Web::Views::Todos::New do
     params.valid?
 
     expect(rendered).to include('There was a problem with your submission')
-    expect(rendered).to include('titile is required')
+    expect(rendered).to include('title is required')
   end
 end
