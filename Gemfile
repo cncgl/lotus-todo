@@ -8,7 +8,7 @@ gem 'lotus-model',   '~> 0.5.0'
 
 gem 'pg',            '~> 0.18'
 
-# gem 'coveralls', require: false
+gem 'coveralls', require: false
 
 
 group :test do
