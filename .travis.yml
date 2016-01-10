@@ -1,5 +1,16 @@
 language: ruby
 rvm:
- - "2.2.0"
+  - "2.2.0"
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
+
+before_install:
+  - psql --version
+env:
+  - DB=postgresql
+script:
+  - LOTUS_ENV=test bundle exec lotus db create
+  - LOTUS_ENV=test bundle exec lotus db migrate
+  - bundle exec rspec
+before_script:
+  - cp .env.travis.test .env.test
