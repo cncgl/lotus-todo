@@ -15,7 +15,7 @@ describe 'Todos' do
       click_button 'Create'
     end
 
-    expect(current_path).to eql '/todos'
+    expect(current_path).to eql '//todos'
     expect(page).to have_content 'Some title'
   end
 end
